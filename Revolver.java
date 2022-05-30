@@ -1,23 +1,22 @@
-
 package com.mycompany.ruleta2_0;
 
 public class Revolver {
 
     Nodo r;
-
+ // Se encarga de crear la lista circular 
     public Revolver() {
         this.r = new Nodo();
         Nodo aux = this.r;
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < 5; i++) {
             aux.siguiente = new Nodo();
             aux = aux.siguiente;
 
         }
         aux.siguiente = this.r;
-
+        cargarBala();
     }
 
-    public void cargarBala() {
+    public final void cargarBala() {
         int x = (int) Math.floor((Math.random() * 6) + 1);
         Nodo aux = this.r;
         for (int i = 0; i < x; i++) {
