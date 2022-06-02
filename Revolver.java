@@ -7,11 +7,13 @@ public class Revolver {
     public Revolver() {
         this.r = new Nodo();
         Nodo aux = this.r;
+        //Creo un ciclo for para que me cree 5 nodos en una lista circular
         for (int i = 0; i < 5; i++) {
             aux.siguiente = new Nodo();
             aux = aux.siguiente;
 
         }
+        //Se une la lista en el punto inicial y final
         aux.siguiente = this.r;
         cargarBala();
     }
@@ -37,20 +39,13 @@ public class Revolver {
     public boolean Fuego() {
         boolean Ruedita = this.r.bala;
         if (Ruedita) {
-
-            balaRecarga();
+         balaRecarga();
         } else {
             this.r = this.r.siguiente;
         }
         return Ruedita;
     }
 
-    public String verificar() {
-        if (Fuego()) {
-            return "V";
-        } else {
-            return "M";
-        }
-    }
+   
 
 }

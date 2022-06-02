@@ -2,19 +2,7 @@ package com.mycompany.ruleta2_0;
 
 public class FuncioanamientoRuleta {
 
-    class nodo {
-
-        Participantes jugadores;
-        Revolver revolver;
-        nodo siguiente;
-
-        nodo(Participantes jugadores) {
-            this.jugadores = jugadores;
-            this.revolver = new Revolver();
-            this.siguiente = null;
-        }
-
-    }
+   
 
     class Participantes {
 
@@ -24,6 +12,19 @@ public class FuncioanamientoRuleta {
         Participantes(String nombre, String apellido) {
             this.nombre = nombre;
             this.apellido = apellido;
+        }
+
+    }
+     class nodo {
+
+        Participantes jugadores;
+        Revolver revolver;
+        nodo siguiente;
+
+        nodo(Participantes jugadores) {
+            this.jugadores = jugadores;
+            this.revolver = new Revolver();
+            this.siguiente = null;
         }
 
     }
